@@ -1,0 +1,16 @@
+.ProductList li {
+  margin: 0 auto 10px;
+  color: Black;
+  list-style-type: none;
+}
+
+.ProductList li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ProductList ul {
+  margin: auto;
+  padding: 0;
+}

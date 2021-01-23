@@ -1,0 +1,11 @@
+.InputGroup {
+  width: 300px;
+  background-color: darkgray;
+  border-radius: 3px;
+  color: grey;
+  margin: 0 auto 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

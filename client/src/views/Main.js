@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import ProductForm from '../components/ProductForm';
-import ProductList from "../components/ProducList"
+import ProductForm from '../components/ProductForm/ProductForm';
+import ProductList from "../components/ProductList/ProductList"
 import axios from "axios";
 
 const Main = () => {

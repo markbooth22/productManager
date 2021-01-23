@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "@reach/router";
-
+import "./ProductList.css"
 
 const ProductList = (props) => {
   const {products} = props;
 
 
   return (
-    <div>
+    <div className="ProductList">
       <h1>All Products:</h1>
       <ul>
         {products.map((product, idx) => {
