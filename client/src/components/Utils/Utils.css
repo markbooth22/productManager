@@ -9,3 +9,15 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.Button a {
+  text-decoration: none;
+  color: black;
+}
+
+.Button {
+  display: block;
+  margin: 0 auto 5px;
+  border-radius: 3px;
+  width: 100px;
+}

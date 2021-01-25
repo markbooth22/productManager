@@ -17,7 +17,7 @@ const Main = () => {
     return (
     <div>
         <ProductForm refresh={refresh} setRefresh={setRefresh}/>
-        <ProductList products={products} />
+        <ProductList products={products} refresh={refresh} setRefresh={setRefresh} />
     </div>
   )
 }

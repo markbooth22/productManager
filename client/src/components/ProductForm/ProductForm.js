@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import {InputGroup} from "../Utils/Utils"
+import {InputGroup, Button} from "../Utils/Utils"
 
 const ProductForm = (props) => {
   const { refresh, setRefresh } = props;
@@ -33,7 +33,7 @@ const ProductForm = (props) => {
         <InputGroup label="Title: " value={title} type="text" handleChange={setTitle} name="title"/>
         <InputGroup label="Price: " value={price} type="number" handleChange={setPrice} name="price"/>
         <InputGroup label="Description: " value={description} type="text" handleChange={setDescription} name="description"/>
-        <input type="submit" value="Create" />
+        <Button type="submit">Create</Button>
       </form>
     </div>
   );

@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
-import "./ProductList.css"
+import axios from "axios";
+import "./ProductList.css";
+import { Button } from "../Utils/Utils";
 
 const ProductList = (props) => {
-  const {products} = props;
+  const { products } = props;
+  const { refresh, setRefresh } = props;
 
+
+  const deleteProduct = (id) => {
+    axios
+      .delete(`http://localhost:8000/api/products/${id}`)
+      .then((res) => {
+        setRefresh(refresh + 1);
+        console.log("Response: ", res);
+      })
+      .catch((err) => console.log("Error: ", err));
+  };
 
   return (
     <div className="ProductList">
@@ -12,10 +25,9 @@ const ProductList = (props) => {
       <ul>
         {products.map((product, idx) => {
           return (
-            <li key={idx} >
-              <Link to={`/product/${product._id}`}>
-                {product.title}
-              </Link>
+            <li key={idx}>
+              <Link to={`/product/${product._id}`}>{product.title}</Link>
+              <Button onClick={ (e) => {deleteProduct(product._id)}}>Delete</Button>
             </li>
           );
         })}
